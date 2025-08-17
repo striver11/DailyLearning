@@ -6,7 +6,7 @@ import { startTransition } from 'react'
 import { StateDefinition } from './components/StateDefinition'
 import FCvsCC from './components/FCvsCC'
 import SimpleIncrementDecrement from './components/SimpleIncrementDecrement'
-
+import {UseState2waysPassingState}from './components/UseState2waysPassingState'
 function App() {
 
   {/* 
@@ -54,7 +54,9 @@ function decrement(){
     <>
     {/* <StateDefinition/> */}
     {/* <FCvsCC/> */}
-    <SimpleIncrementDecrement/>
+    {/* <SimpleIncrementDecrement/> */}
+    <UseState2waysPassingState/>
+
       {/* <div>
         <button onClick={decrement}>-</button>
         <span>0</span>
