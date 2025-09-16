@@ -1,12 +1,16 @@
 import express from 'express'
 
-import { join } from 'node:path'
+import { join } from 'node:path' //why are we importing  join with {} not express
+
+// We import join with {} because it is a named export from the built-in node:path module.
+// Express is imported without {} because it is a default export from the express package.
 
 const app=express()
 
 
 app.get('/html-get',(req,res)=>{
     res.status(200).set({'content-type':'text/html'}).send("this is simple html get requenst")
+
 })
 
 
