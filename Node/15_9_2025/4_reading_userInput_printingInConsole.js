@@ -1,26 +1,25 @@
-// Printing message to terminal
+// Print welcome messages
 console.log("Hello from Node.js")
 console.log("This is my first Node.js app")
 
-// Reading user input
-const readline=require("readline")
-
-// create interface once with exlplicit config
-
-const r1=readline.createInterface({
-  input:process.stdin,
-  output:process.stdout
+// Import readline with const
+const readline = require('readline')
+// Create interface once with explicit config
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 })
 
-//prompt for uesr's input
-r1.question("please enter your name:",(name)=>{
-  //basic input validation:trim whitespaces and escape
-  const safeName=name.replace(/[<>]/g,"").trim()
-  console.log(`You entered ${safeName}`)
+// Prompt for user's name
+rl.question("Please enter your name: ", (name) => {
+  // Basic input validation: trim whitespace and escape
+  const safeName = name.replace(/[<>]/g, "").trim()
+  console.log(`You entered "${safeName}"`)
+  rl.close()
 })
 
-//Listen for close event and exit safely
-r1.on("close",()=>{
-  console.log("interface closed")
+// Listen for close event and exit safely
+rl.on("close", () => {
+  console.log("Interface closed")
   process.exit(0)
 })
