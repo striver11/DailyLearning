@@ -6,9 +6,14 @@ export function Counter() {
 
   function decrementCount() {
     setCount(prevCount => prevCount - 1);
+    setCount(prevCount => prevCount - 1);
+
+    // setCount(count-1)
+    // setCount(count-1)
   }
 
   function incrementCount() {
+    setCount(prevCount => prevCount + 1);
     setCount(prevCount => prevCount + 1);
     setTheme('red'); // Example: change theme when incrementing
   }
