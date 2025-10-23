@@ -34,3 +34,7 @@ function mul(){
 console.log(calculation("the cal is:",add,mul))
 
 //comment out the line 18 console.log() and see the result basically here function overriding is nappening
+
+
+
+

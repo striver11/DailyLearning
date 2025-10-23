@@ -13,10 +13,14 @@ while(r<al){
         }
 
     if(sum<=k){
-        maxlen=Math.max(maxlen,r-l+1)
 
+    if (r - l + 1 > maxlen) {   // update maxlen when a bigger subarray is found
+        maxlen = r - l + 1;
+        li = l;
+        ri = r;
+    }
 
-
+         //maxlen=Math.max(maxlen,r-l+1)
         //this below condition does not work because the maxlen
 
         // You update maxlen correctly with Math.max.
